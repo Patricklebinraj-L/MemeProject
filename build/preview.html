@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+
+h1 {
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.image-preview-container {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    border-radius: 20px;
+}
+
+.image-preview-container img {
+    width: 100%;
+    display: none;
+    margin-bottom: 30px;
+}
+.image-preview-container input {
+    display: none;
+}
+
+.image-preview-container label {
+    display: block;
+    width: 45%;
+    height: 45px;
+    margin-left: 25%;
+    text-align: center;
+    background: #8338ec;
+    color: #fff;
+    font-size: 15px;
+    text-transform: Uppercase;
+    font-weight: 400;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+</style>
+</head>
+<body>
+  
+   
+    
+
+
+    <h1>Preview an Image Before Uploading Using JavaScript</h1>
+<div class="image-preview-container">
+    <div class="preview">
+        <img id="preview-selected-image" />
+    </div>
+    <label for="file-upload">Upload Image</label>
+    <input type="file" id="file-upload" accept="image/*" onchange="previewImage(event);" />
+
+<video width="100%" controls autoplay src="https://s11.gotofiles.online/download/a90d505c0bd6115c065ba1425a9ad05b/1691861425/p/Tamil%202023%20Movies/DD%20Returns%20(2023)/DD%20Returns%20(HQ%20PreDVD)/DD%20Returns%20(720p%20HD)/Moviesda.Mobi%20-%20DD%20Returns%202023%20720p%20PreDVD.mp4">
+    <source type="video/mp4"/>
+</video>
+
+</div>
+
+
+
+<script>
+
+const previewImage = (event) => {
+    /**
+     * Get the selected files.
+     */
+    const imageFiles = event.target.files;
+    /**
+     * Count the number of files selected.
+     */
+    const imageFilesLength = imageFiles.length;
+    /**
+     * If at least one image is selected, then proceed to display the preview.
+     */
+    if (imageFilesLength > 0) {
+        /**
+         * Get the image path.
+         */
+        const imageSrc = URL.createObjectURL(imageFiles[0]);
+        /**
+         * Select the image preview element.
+         */
+        const imagePreviewElement = document.querySelector("#preview-selected-image");
+        /**
+         * Assign the path to the image preview element.
+         */
+        imagePreviewElement.src = imageSrc;
+        /**
+         * Show the element by changing the display value to "block".
+         */
+        imagePreviewElement.style.display = "block";
+    }
+};
+
+
+</script>
+
+
+</body>
+</html>

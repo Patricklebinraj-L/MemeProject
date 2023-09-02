@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag to Move and Save Canvas</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    canvas {
+      border: 2px solid gray;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="400" height="300"></canvas>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let activeImage = null;
+    let initialX = 0;
+    let initialY = 0;
+    let offsetX = 0;
+    let offsetY = 0;
+
+    const images = [
+      { src: 'img1.jpg', x: 50, y: 50 },
+      { src: 'img2.png', x: 150, y: 150 },
+      { src: 'img3.png', x: 250, y: 250 }
+    ];
+
+    images.forEach(imageData => {
+      const img = new Image();
+      img.src = imageData.src;
+      img.onload = () => {
+        ctx.drawImage(img, imageData.x, imageData.y, 100, 100);
+      };
+    });
+
+    canvas.addEventListener('mousedown', onMouseDown);
+
+    function onMouseDown(event) {
+      const mouseX = event.clientX - canvas.getBoundingClientRect().left;
+      const mouseY = event.clientY - canvas.getBoundingClientRect().top;
+
+      images.forEach(imageData => {
+        if (
+          mouseX >= imageData.x &&
+          mouseX <= imageData.x + 100 &&
+          mouseY >= imageData.y &&
+          mouseY <= imageData.y + 100
+        ) {
+          activeImage = imageData;
+          initialX = mouseX - activeImage.x;
+          initialY = mouseY - activeImage.y;
+
+          offsetX = mouseX - activeImage.x;
+          offsetY = mouseY - activeImage.y;
+
+          canvas.addEventListener('mousemove', onMouseMove);
+          canvas.addEventListener('mouseup', onMouseUp);
+        }
+      });
+    }
+
+    function onMouseMove(event) {
+      if (activeImage) {
+        const mouseX = event.clientX - canvas.getBoundingClientRect().left;
+        const mouseY = event.clientY - canvas.getBoundingClientRect().top;
+
+        activeImage.x = mouseX - offsetX;
+        activeImage.y = mouseY - offsetY;
+
+        drawImages();
+      }
+    }
+
+    function onMouseUp() {
+      activeImage = null;
+
+      canvas.removeEventListener('mousemove', onMouseMove);
+      canvas.removeEventListener('mouseup', onMouseUp);
+    }
+
+    function drawImages() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      images.forEach(imageData => {
+        const img = new Image();
+        img.src = imageData.src;
+        ctx.drawImage(img, imageData.x, imageData.y, 100, 100);
+      });
+    }
+
+    function downloadCanvas() {
+      const dataURL = canvas.toDataURL();
+      console.log(dataURL);
+      const link = document.createElement('a');
+      link.href = dataURL;
+      link.download = 'canvas_image.png';
+      link.click();
+    }
+  </script>
+
+  <button onclick="downloadCanvas()">Download Canvas as Image</button>
+</body>
+</html>
