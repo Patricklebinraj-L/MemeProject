@@ -1,0 +1,160 @@
+
+.preview-box{
+
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 100%;
+    max-width: 70%;
+    height: 50%;
+    border: 0px solid gray;
+    border-radius: 20px;
+    margin-bottom: 20%;
+    background-color: rgb(58, 57, 57);
+    overflow: hidden;
+    padding: 3px;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 50px;
+    margin: 0;
+    padding: 20px;
+    margin-top: 50px;
+    z-index: 10;
+    text-align: right;
+}
+
+/* .preview-box img{
+
+    position: relative;
+    top:1%;
+    left: -15%;
+    height: 90%;
+    width: auto;
+    max-width: 50%;
+
+}
+
+
+.preview-box video{
+
+    position: relative;
+    top:1%;
+    left: 1%;
+    height: 90%;
+    width: auto;
+    max-width: 50%;
+
+}
+
+.preview-box button{
+    position: relative;
+    bottom: 1%;
+    right: 5%;
+    float: right;
+    top: 80%;
+} */
+
+.preview-box div{
+
+    border:0px solid rgb(102, 103, 102);
+    border-radius: 20px;
+    overflow: hidden;
+    max-height: 70%;
+    max-width: 70%;
+    max-height: fit-content;
+
+}
+
+.preview-box div img{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.preview-box div video{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+
+.preview-box div h1{
+    color: rgb(23, 207, 106);
+}
+.preview-box div p{
+    color: gray;
+}
+
+.preview-box div button{
+
+    margin-left: 20px;
+
+}
+
+.subbtn{
+    background-color: orange;
+}
+
+
+
+
+@media screen and (max-width:500px) {
+
+    .post-box{
+
+        padding: 10px;
+        left: 2%;
+        width: 96%;
+        height: 150px;
+       
+    
+    }
+
+    .post-box .post-btn{
+        left: 84%;
+        top: 72%;
+    }
+
+    .img-btn{
+
+        top: 75%;
+        left: 60%;
+    }
+    .vid-btn{
+
+        top: 75%;
+        left: 69%;
+    }
+
+    .preview-box{
+        grid-template-columns: auto;
+        gap: 50px;
+    }
+
+}
+
+
+
+@media screen and (max-width:600px) {
+
+
+    .preview-box{
+
+            max-width: 220%;
+            left: -0%;
+            gap: 0px;
+            top: 6%;
+            height: 86%;
+            grid-template-columns: auto;
+            justify-content: center;
+    align-items: center;
+
+    }
+    .preview-box div{
+        margin-top: 100px;
+    }
+}

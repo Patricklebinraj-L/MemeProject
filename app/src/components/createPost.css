@@ -1,0 +1,163 @@
+.post-box{
+
+    position: relative;
+    margin-bottom: 3px;
+    padding: 10px;
+    width: 80%;
+    height: 150px;
+    background-color: rgb(62, 61, 61);
+    box-shadow: 2px 4px 3px 1px rgb(45, 45, 45);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* border-width: 3px;
+    border-style: solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(to left, #743ad5, #d53a9d); */
+      background: linear-gradient(to left, rgb(34, 33, 33), rgb(28, 120, 74));
+      /* 97264d */
+
+}
+
+.inp-box{
+    background-color: transparent;
+    width: 70%;
+    height: 80px;
+    color: rgb(215, 223, 223);
+    border: 1px solid transparent;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+input:focus { 
+    outline: none !important;
+    border-color: rgb(65, 66, 66);
+    box-shadow: 0 0 10px rgb(65, 66, 66);
+    cursor:auto;
+ }
+
+
+
+.post-box a{
+    top: 69%;
+    color: rgb(24, 192, 94);
+    /* box-shadow: 1px 2px 3px 1px rgb(8, 94, 61);
+    background: transparent;
+    background-color:  rgb(8, 94, 61); */
+}
+
+.post-box a:hover{
+
+    box-shadow: 1px 1px 5px 5px rgb(8, 94, 61);
+    background-color:  rgb(8, 94, 61); 
+    font-size: 18px;
+}
+
+.post-box p{
+    position: relative;
+    margin-top: -11%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    color: rgb(26, 192, 150);
+}
+
+.post-box .post-btn{
+    position: absolute;
+    left: 85%;
+    top: 62%;
+    /* box-shadow: 1px 5px 5px 5px rgb(8, 94, 61); */
+    background-color: rgb(30, 164, 97);
+    border:1px solid rgb(30, 164, 97);
+    /* background-color: rgb(151, 12, 97);
+    border: 1px solid rgb(151, 12, 97); */
+}
+
+.post-box .post-btn:hover{
+
+    background-color: orange;
+    border: 2px solid orange;
+    box-shadow: 1px 5px 5px 5px rgb(138, 105, 43);
+
+}
+
+.img-btn{
+    position: absolute;
+    top: 60%;
+    left: 68%;
+}
+.vid-btn{
+    position: absolute;
+    top: 60%;
+    left: 75%;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: cornflowerblue;
+    cursor: pointer;
+}
+
+.addImg{
+    color: rgb(161, 159, 159);
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:700px) {
+
+    .addImg{
+        margin-top: 10px;
+        margin-left: -20px;
+    }
+
+    .post-box{
+
+        padding: 10px;
+        left: 2%;
+        width: 96%;
+        height: 150px;
+       
+
+    }
+
+    .post-box .post-btn{
+        left: 74%;
+        top: 68%;
+    }
+
+    .img-btn{
+
+        top: 75%;
+        left: 51%;
+    }
+    .vid-btn{
+
+        top: 75%;
+        left: 65%;
+    }
+
+
+}
+
+
+
+
+@media screen and (max-width:1000px) {
+
+    .post-box{
+       
+        width: 100%;
+    }
+
+
+
+}
+

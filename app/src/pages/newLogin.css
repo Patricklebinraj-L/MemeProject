@@ -1,0 +1,226 @@
+#home{
+
+margin-top: 1%;
+background-color: #292929;
+
+
+}
+
+
+
+
+
+.sheet{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(61, 119, 121);
+}
+
+
+.container{
+position: relative;
+margin-top:0px;
+left: 0;
+width: auto;
+word-wrap: break-word;
+padding: 10px 10px 10px 10px;
+display: grid;
+grid-template-columns: auto auto;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+background-color: rgb(61, 119, 121);
+height: fit-content;
+
+}
+
+.con{
+
+
+    margin-top: 50px;
+    width:100%;
+    height: fit-content;
+    margin-left: -40%;
+    background-color: rgb(44, 94, 95);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 50px;
+
+}
+.con2{
+
+    position: relative;
+    width: 60%;
+    margin-top: 50px;
+    margin-left: 50px;
+    height: 450px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+    font-size: 30px;
+    text-align:center;
+    padding: 33px 30px 30px 30px;
+   
+
+
+}
+
+#log-tit{
+
+    background: linear-gradient(to right,rgb(28, 149, 133),white);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+.fld{
+
+    position: relative;
+    margin-left: 10%;
+    width: 80%;
+    height: 100px;
+    margin-top: 80px;
+    
+    }
+
+.fld label{
+    position: absolute;
+    left: 3%;
+    top: 10%;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+
+}
+
+
+.fld input{
+
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    border: 1px solid rgb(52, 35, 43);
+    height: 30px;
+    width:100%;
+    text-align: center;
+    color: #292929;
+    margin-top: -10px;
+    border: 0px solid transparent;
+    background-color: rgb(226, 237, 248);
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+.fld p{
+    position: absolute;
+    top: 65%;
+    left: 0%;
+    color: rgb(242, 174, 28);
+    font-size: 13px;
+}
+
+
+.log-btn{
+
+position: relative;
+margin-top: 150px;
+width: fit-content;
+height: fit-content;
+background-color:rgb(32, 171, 92);
+color: white;
+font-family: sans-serif;
+font-weight: 600;
+text-align: center;
+border-radius: 10px;
+cursor: pointer;
+border: 1px solid transparent;
+margin-left: 0%;
+margin-top: 30px;
+padding: 10px;
+padding-left: 20px;
+padding-right: 20px;
+
+
+
+}
+
+.cancel{
+    margin-left: 10px;
+}
+
+button:hover{
+    background-color: rgb(22, 60, 61);
+    color: white;
+    border: 2px solid transparent;
+}
+
+h2{
+    position: relative;
+    top: 0%;
+    left: 3%;
+    color: rgb(33, 200, 219);
+}
+
+
+h1{
+
+    position: relative;
+    margin-top: -300px;
+    color: rgb(37, 195, 213);
+
+}
+
+.con2 h1{
+position: relative;
+margin-top: 100px;
+font-size: 37px;
+color: white;
+
+
+}
+.con2 p{
+    position: relative;
+    margin-top: 100px;
+    font-size: 25px;
+    font-style: italic;
+    color: orange;
+    
+    
+    }
+
+
+    
+
+
+    @media only screen and (max-width: 900px) {
+        
+
+        .container{
+            grid-template-columns: auto;
+            padding: 10px 10px 10px 10px;
+        }
+
+        .con{
+            margin-left: 1%;
+            width:90%;
+        }
+
+        .con2{
+            width: 89%;
+            margin-left: -2%;
+            height: fit-content;
+            padding-bottom: 50px;
+            margin-top: 0;
+        }
+        .fld input{
+            padding: 20px;
+        }
+
+
+      }
+    

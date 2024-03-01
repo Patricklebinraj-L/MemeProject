@@ -1,0 +1,325 @@
+.post-con{
+
+position: relative;
+margin-top: 100px;
+left: 27%;
+width: 55%;
+height: auto;
+display: grid;
+gap: 30px;
+padding: 30px;
+border-radius: 20px;
+border: 0px solid green;
+}
+
+.post{
+    width: 80%;
+    height: fit-content;
+    border-radius: 20px;
+    overflow: visible;
+    padding: 3px;
+    height: fit-content;
+    position: relative;
+    margin-top:60px;
+}
+
+
+
+
+  
+
+
+
+.post .tg{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    /* background-color: rgb(18, 145, 82); */
+    /* background-color: rgb(172, 32, 95); */
+    background-color: #353635;
+}
+
+.post .tg p{
+    font-weight: 700;
+    color: white;
+}
+
+.post .cont{
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    height: fit-content;
+    border: 5px solid rgb(64, 64, 64);
+    overflow: hidden;
+    z-index: 1;
+    /* height: 80%; */
+
+}
+
+.post .cont .img{
+
+    position: relative;
+    z-index: 1;
+    object-fit: contain;
+    /* display: none; */
+
+}
+
+.post .cont-bar{
+    position:relative;
+    left: 0%;
+    width: 100%;
+    height: 70px;
+    display: grid;
+    grid-auto-flow: column;
+    text-align: center;
+    z-index: 3;
+    margin-top: 0px;
+}
+
+
+.post .cont-bar span{
+
+    position: relative;
+    background-color: rgb(76, 75, 75);
+    width: auto;
+    height: 100%;
+    padding: 20px;
+    cursor: pointer;
+    border: 1px solid rgb(54, 53, 53);
+    font-weight: 600;
+    color: aliceblue;
+    z-index: 3;
+
+}
+
+.post .cont-bar a{
+
+    
+    position: relative;
+    background-color: rgb(76, 75, 75);
+    width: auto;
+    height: 100%;
+    padding: 20px;
+    cursor: pointer;
+    border: 1px solid rgb(54, 53, 53);
+    font-weight: 600;
+    color: aliceblue;
+    z-index: 3;
+    text-decoration: none;
+    user-select: none;
+
+}
+
+.post .cont-bar a span{
+
+   background-color: transparent;
+   border: 0px solid gray;
+
+}
+
+.post .cont-bar span:hover{
+
+    background:rgb(8, 137, 103);
+    color: aliceblue;
+
+}
+
+.post .cont-bar a:hover{
+
+    background:rgb(8, 137, 103);
+    color: aliceblue;
+    
+    }
+    .post .cont-bar .comment-open{
+        display: block;
+    }
+    .post .cont-bar .comment-close{
+        display: none;
+    }
+
+
+.comment-box{
+        position: relative;
+        width: 100%;
+        height:fit-content;
+        background-color: black;
+        z-index: 50;
+        display: none;
+      
+
+
+}
+
+.comment-box .rl{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: rgb(11, 195, 11);
+    background-color: rgb(34, 34, 34);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.comment-box .rl:hover{
+    background-color: #353635;
+}
+
+.comment-box div:nth-child(1){
+    position: relative;
+    min-height: 100px;
+    width: 100%;
+    color: white;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-right: 20px;
+    word-wrap: break-word;
+}
+
+
+.comment-box div:nth-child(1)  text{
+    color: rgb(29, 212, 102);
+}
+
+.comment-box div:nth-child(2){
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: fit-content;
+    width: 100%;
+}
+
+.comment-box div:nth-child(2) input{
+
+    width: 80%;
+    height: 60px;
+    border: 2px solid black;
+}
+
+.comment-box div:nth-child(2) button{
+
+    width: 20%;
+    height: 60px;
+    text-align: center;
+    margin-top: -6px;
+    background-color: rgb(161, 9, 108);
+    border: 1px solid rgb(161, 9, 108);
+
+}
+
+.comment-box div:nth-child(2) button:hover{
+    
+    background-color: rgb(130, 8, 88);
+    border: 1px solid rgb(130, 8, 88);
+
+}
+
+
+.spin-loader{
+
+    position: absolute;
+    top: 25%;
+    left: 46%;
+    color: #717971;
+    animation: spin 2s infinite ease;
+    z-index: 1;
+    font-size: 40px;
+
+}
+
+.nd{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: gray;
+    align-items: center;
+    margin-top: 50%;
+}
+
+@keyframes spin {
+
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+    
+}
+
+
+
+
+
+@media screen and (max-width:1000px) {
+    
+
+    .post-con{
+
+        left: 35%;
+        width: 65%;
+
+
+        }
+    .post{
+        width: 100%;
+    }
+
+    .nd{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: gray;
+        align-items: center;
+        margin-top: 50%;
+    }
+
+}
+
+
+
+@media screen and (max-width:700px) {
+    
+
+    .post-con{
+
+        left: 0%;
+        width: 100%;
+
+
+
+        }
+    .post{
+        width: 100%;
+    }
+
+
+}
+
+
+
+@media screen and (max-width:400px) {
+    
+
+    .post-con{
+
+        padding: 0;
+        margin-top: 150px;
+
+        }
+
+
+
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+<style>
+
+#root{
+  background-color: #525050;
+}
+
+#loader{
+  position: fixed;
+    top: 37%;
+    left: 43%;
+    width: 80px;
+    height: 80px;
+    background: rgb(16, 16, 16);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(24, 24, 24);
+    /* visibility: hidden; */
+    /* border-width: 5px;
+    border-style: solid;
+      /* border-image-slice:0.1%; */
+      /* border-image: linear-gradient(to bottom, #4bb0a1, #488c95) 10% 0; */
+      border-radius: 6px;
+
+}
+#loader span{
+  font-size: 40px;
+  font-weight: 400;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: -webkit-linear-gradient(#a20f74,crimson);
+  transition: rotate 1.8s;
+  animation: rotate 2s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes rotate {
+
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+  
+}
+
+@media screen and (max-width:600px) {
+
+  #loader{
+  position: fixed;
+    top: 37%;
+    left: 38%;
+    width: 70px;
+    height: 70px;
+    background: rgb(78, 78, 78);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    /* visibility: hidden; */
+ 
+
+}
+
+#loader span{
+  font-size: 25px;
+}
+  
+}
+
+
+</style>
+
+
+<title>Focio!</title>
+
+  </head>
+  <body style=" background-color:#292929;">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+   
+
+    <div id="root" >
+
+      
+
+    </div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+
+
+
+    <script>
+
+
+        
+
+        window.addEventListener("load",function(){
+
+          
+
+          setTimeout(function(){
+
+            var loader = document.getElementById("loader");
+            if(loader){
+            loader.style.visibility = "hidden";
+            }
+
+            
+
+          },5000)
+
+        
+
+
+        });
+
+
+
+      setInterval(function(){
+
+        var header = document.getElementById("header");
+        var menu = document.getElementById("menu");
+        var footer = document.getElementById("footer");
+        let sc = window.scrollY;
+        if(header){
+        if(sc>20){
+          header.classList.add('sticky');
+
+        }
+        else{
+          header.classList.remove('sticky');
+        }
+
+      
+       
+
+        
+        
+        
+
+
+
+      }
+
+
+
+    
+
+
+      })
+      
+
+      
+
+
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-router/6.15.0/react-router.production.min.js" integrity="sha512-WzZrYGzgS7Y2QQ8ZfLKZ4cblnm/70a4qiumX7owgLrZb43VYBbj+LOd+VGGffRDL2qsPXsgOjSgPT2AiKp9x/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/6.15.0/react-router-dom.production.min.js" integrity="sha512-PgdMRMQh5HyuxQcW6aFacf8zTkloi3Yac54il/chHfrUPPDwPrpt5h59wkIOoJlCY4kqS8ehFi8VKjFLcRjC/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  </body>
+</html>

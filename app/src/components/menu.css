@@ -1,0 +1,82 @@
+.menu-bar-con{
+
+    position:fixed;
+    margin-top: 8px;
+    left: -150%;
+    width: 24%;
+    height: 500px;
+    display: grid;
+    gap: 10px;
+    padding: 30px;
+    background-color: rgb(52, 52, 52);
+    border-radius: 10px;
+    z-index: 150;
+    padding-top: 10px;
+    box-shadow: 1px 2px 4px 4px rgb(37, 37, 37);
+    transition: all 1s;
+
+}
+.menu-bar-con h3{
+    font-size: 22px;
+    color: rgb(49, 137, 226);
+
+}
+
+.menu-bar-con div{
+    position: absolute;
+    top: 10%;
+    width: 80%;
+    left: 10%;
+    height: 90%;
+    padding: 5px;
+    display: grid;
+    grid-auto-flow: row;
+    text-align: center;
+    gap: 0px;
+
+}
+.menu-opt a{
+    color: rgb(99, 175, 245);
+    text-decoration: none;
+    height: fit-content;
+    padding: 9px;
+    transition: all 0.4s ease;
+    margin-top: 0px;
+}
+.menu-bar-con a:hover{
+    color: cornflowerblue;
+    background-color: rgb(65, 64, 64);
+    padding: 14px;
+
+}
+#menuBtn{
+    position: fixed;
+    top: 17%;
+    left: 2%;
+    color: aliceblue;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#cancel{
+    position: absolute;
+    top: 1%;
+    left: 90%;
+    color: gray;
+    cursor: pointer;
+}
+#cancel:hover{
+    color: aliceblue;
+}
+
+
+@media screen and (max-width:700px) {
+    
+
+    .menu-bar-con{
+        width: 59%;
+    }
+
+
+}
